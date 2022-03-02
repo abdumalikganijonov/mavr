@@ -1,5 +1,6 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -150,6 +151,17 @@ the website, in dark theme
 
 .dark-theme .scroll-header{
   box-shadow: 0 1px 4px hsla(var(--hue), 4%, 4%, .3);
+}
+
+.dark-theme .home__social-follow,
+.dark-theme .home__social-link,
+.dark-theme .button--flex{
+  color: var(--title-color);
+}
+
+.dark-theme .steps__card-number{
+  background-color: var(--text-color);
+  color: var(--first-color);
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
@@ -330,7 +342,7 @@ the website, in dark theme
   right: -1rem;
   display: grid;
   justify-items: center;
-  row-gap: 3.5rem;
+  row-gap: 4rem;
 }
 
 .home__social-follow{
@@ -462,7 +474,7 @@ the website, in dark theme
   display: inline-block;
   background-color: var(--first-color-alt);
   color: #FFF;
-  padding: .4rem .75rem;
+  padding: .4rem .75rem .2rem;
   border-radius: .25rem;
   font-size: var(--h2-font-size);
   margin-bottom: var(--mb-1-5);
@@ -661,7 +673,7 @@ the website, in dark theme
 .contact__content{
   position: relative;
   height: 3rem;
-  border-bottom: 1px solid var(--text-color-light);
+  border-bottom: 1px solid var(--text-color);
 }
 
 .contact__input{
@@ -686,7 +698,7 @@ the website, in dark theme
   top: .75rem;
   width: 100%;
   font-size: var(--small-font-size);
-  color: var(--text-color-light);
+  color: var(--text-color);
   transition: .3s;
 }
 
@@ -794,7 +806,7 @@ the website, in dark theme
 }
 
 .footer__social-link{
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: var(--text-color);
   transition: .3s;
 }
@@ -815,8 +827,9 @@ the website, in dark theme
 .footer__copy{
   text-align: center;
   font-size: var(--smaller-font-size);
-  color: var(--text-color-light);
+  color: var(--text-color);
   margin: 5rem 0 1rem;
+  opacity: 0.5;
 }
 
 /*=============== SCROLL UP ===============*/
