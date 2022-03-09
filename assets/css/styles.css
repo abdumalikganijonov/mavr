@@ -223,6 +223,7 @@ the website, in dark theme
   text-transform: lowercase;
   font-weight: 700;
   letter-spacing: -1px;
+  line-height: 6px;
   display: inline-flex;
   align-items: center;
   column-gap: .5rem;
@@ -236,6 +237,15 @@ the website, in dark theme
 
 .nav__logo:hover{
   color: var(--first-color);
+}
+
+.logo-icon{
+  height: 24px;
+}
+.logo-text{
+  font-family: Helvetica;
+  font-size: 2.8rem;
+  font-weight: 700;
 }
 
 .nav__toggle{
@@ -257,6 +267,13 @@ the website, in dark theme
     border-radius: 1rem 0 0 1rem;
     transition: .3s;
     z-index: var(--z-fixed);
+  }
+  .dark-theme .nav__link:hover,
+  .dark-theme .active-link{
+    color: #4277EB;
+  }
+  .dark-theme .active-link::after{
+    background-color: #4277EB;
   }
 }
 
@@ -606,6 +623,11 @@ the website, in dark theme
   height: 0;
 }
 
+.questions__link {
+  text-decoration: underline;
+  color: #90B3FF;
+}
+
 .questions__item,
 .questions__header,
 .questions__item-title,
@@ -749,9 +771,10 @@ the website, in dark theme
   align-items: center;
   column-gap: .5rem;
   color: var(--title-color);
-  text-transform: uppercase;
+  text-transform: lowercase;
   font-weight: 700;
   letter-spacing: -1px;
+  line-height: 6px;
   margin-bottom: var(--mb-2-5);
   transition: .3s;
 }
