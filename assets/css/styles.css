@@ -1,5 +1,6 @@
 /*=============== GOOGLE FONTS ===============*/
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 /*=============== VARIABLES CSS ===============*/
 :root {
@@ -152,6 +153,17 @@ the website, in dark theme
   box-shadow: 0 1px 4px hsla(var(--hue), 4%, 4%, .3);
 }
 
+.dark-theme .home__social-follow,
+.dark-theme .home__social-link,
+.dark-theme .button--flex{
+  color: var(--title-color);
+}
+
+.dark-theme .steps__card-number{
+  background-color: var(--text-color);
+  color: var(--first-color);
+}
+
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section{
   padding: 5.5rem 0 1rem;
@@ -211,6 +223,7 @@ the website, in dark theme
   text-transform: lowercase;
   font-weight: 700;
   letter-spacing: -1px;
+  line-height: 6px;
   display: inline-flex;
   align-items: center;
   column-gap: .5rem;
@@ -224,6 +237,15 @@ the website, in dark theme
 
 .nav__logo:hover{
   color: var(--first-color);
+}
+
+.logo-icon{
+  height: 24px;
+}
+.logo-text{
+  font-family: Helvetica;
+  font-size: 2.8rem;
+  font-weight: 700;
 }
 
 .nav__toggle{
@@ -245,6 +267,13 @@ the website, in dark theme
     border-radius: 1rem 0 0 1rem;
     transition: .3s;
     z-index: var(--z-fixed);
+  }
+  .dark-theme .nav__link:hover,
+  .dark-theme .active-link{
+    color: #4277EB;
+  }
+  .dark-theme .active-link::after{
+    background-color: #4277EB;
   }
 }
 
@@ -330,7 +359,7 @@ the website, in dark theme
   right: -1rem;
   display: grid;
   justify-items: center;
-  row-gap: 3.5rem;
+  row-gap: 4rem;
 }
 
 .home__social-follow{
@@ -462,7 +491,7 @@ the website, in dark theme
   display: inline-block;
   background-color: var(--first-color-alt);
   color: #FFF;
-  padding: .4rem .75rem;
+  padding: .4rem .75rem .2rem;
   border-radius: .25rem;
   font-size: var(--h2-font-size);
   margin-bottom: var(--mb-1-5);
@@ -594,6 +623,11 @@ the website, in dark theme
   height: 0;
 }
 
+.questions__link {
+  text-decoration: underline;
+  color: #90B3FF;
+}
+
 .questions__item,
 .questions__header,
 .questions__item-title,
@@ -661,7 +695,7 @@ the website, in dark theme
 .contact__content{
   position: relative;
   height: 3rem;
-  border-bottom: 1px solid var(--text-color-light);
+  border-bottom: 1px solid var(--text-color);
 }
 
 .contact__input{
@@ -686,13 +720,13 @@ the website, in dark theme
   top: .75rem;
   width: 100%;
   font-size: var(--small-font-size);
-  color: var(--text-color-light);
+  color: var(--text-color);
   transition: .3s;
 }
 
 .map-responsive{
-  overflow:hidden;
-  padding-bottom:56.25%;
+  overflow: visible;
+  padding-bottom: 56.25%;
   position: absolute;
   height: 40%;
 }
@@ -727,6 +761,112 @@ the website, in dark theme
   z-index: 10;
 }
 
+/*=============== MODAL ===============*/
+
+.modal{
+  width: 80%;
+  max-width: 500px;
+  height: auto;
+  background: var(--body-color);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  transform: translateX(-50%) translateY(-350%);
+  box-shadow: 5px 5px 5px rgba(0,0,0,.2);
+  z-index: 102;
+  transition: all .5s;
+  border-radius: 1rem;
+  /* display: none; */
+}
+
+.modal.is_open{
+  /* display: block; */
+  transform: translateX(-50%) translateY(-75%);
+  transition: all .5s;
+}
+
+.modal.is_open + .modal_overlay{
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 101;
+  background-color: #000;
+  opacity: 50%;
+}
+
+.container {
+  padding: ;
+}
+.modal_header{
+  position: relative;
+  box-shadow: 0 2px 2px rgba(0,0,0,.2);
+  padding-left: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 0.75rem;
+  padding-right: 4px;
+}
+
+.modal_header h1{
+  font-size: var(--h2-font-size);
+  position: relative;
+  z-index: 12;
+  text-shadow: 0px 0px 5px rgba(0,0,0,0.7);
+}
+
+.close{
+  width: 20px;
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  transition: all .5s;
+  filter: invert(100%);
+  z-index: 12;
+}
+
+.modal_body{
+  padding-left: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 1.5rem;
+}
+
+.modal_body p{
+  padding-top: 100px;
+  position: relative;
+  z-index: 12;
+  text-shadow: 0px 0px 5px rgba(0,0,0,0.7);
+}
+
+.modal_body .check_animate{
+  margin: 0px auto;
+  width: 50%;
+  position: absolute;
+  left: 25%;
+  top: 0%;
+}
+
+.modal_footer{
+  max-height: 96px;
+  /*box-shadow: 0 -2px 2px rgba(0,0,0,.2);*/
+  text-align: center;
+}
+
+.btn_cancel{
+  width: 125px;
+  line-height: 1;
+  background-color: var(--first-color);
+  color: #FFF;
+  border-radius: .5rem;
+  font-weight: var(--font-medium);
+  transition: .3s;
+  margin-bottom: 1.4rem;
+}
+
 /*=============== FOOTER ===============*/
 .footer__container{
   row-gap: 3rem;
@@ -737,9 +877,10 @@ the website, in dark theme
   align-items: center;
   column-gap: .5rem;
   color: var(--title-color);
-  text-transform: uppercase;
+  text-transform: lowercase;
   font-weight: 700;
   letter-spacing: -1px;
+  line-height: 6px;
   margin-bottom: var(--mb-2-5);
   transition: .3s;
 }
@@ -784,6 +925,11 @@ the website, in dark theme
   row-gap: .75rem;
 }
 
+.footer__data a{
+  text-decoration: none;
+  color: var(--text-color);
+}
+
 .footer__information{
   font-size: var(--small-font-size);
 }
@@ -794,7 +940,7 @@ the website, in dark theme
 }
 
 .footer__social-link{
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: var(--text-color);
   transition: .3s;
 }
@@ -815,8 +961,9 @@ the website, in dark theme
 .footer__copy{
   text-align: center;
   font-size: var(--smaller-font-size);
-  color: var(--text-color-light);
+  color: var(--text-color);
   margin: 5rem 0 1rem;
+  opacity: 0.5;
 }
 
 /*=============== SCROLL UP ===============*/
