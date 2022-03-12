@@ -164,6 +164,11 @@ the website, in dark theme
   color: var(--first-color);
 }
 
+.dark-theme .modal_body p,
+.dark-theme .modal_header h1{
+  text-shadow: 0px 0px 5px rgba(0,0,0,0.7);
+}
+
 /*=============== REUSABLE CSS CLASSES ===============*/
 .section{
   padding: 5.5rem 0 1rem;
@@ -813,7 +818,6 @@ the website, in dark theme
   font-size: var(--h2-font-size);
   position: relative;
   z-index: 12;
-  text-shadow: 0px 0px 5px rgba(0,0,0,0.7);
 }
 
 .close{
@@ -839,7 +843,6 @@ the website, in dark theme
   padding-top: 100px;
   position: relative;
   z-index: 12;
-  text-shadow: 0px 0px 5px rgba(0,0,0,0.7);
 }
 
 .modal_body .check_animate{
