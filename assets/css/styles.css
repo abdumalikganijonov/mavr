@@ -245,11 +245,12 @@ the website, in dark theme
 }
 
 .logo-icon{
-  height: 24px;
+  height: 25px;
+  padding-top: 2px;
 }
 .logo-text{
   font-family: Helvetica;
-  font-size: 2.8rem;
+  font-size: 2.6rem;
   font-weight: 700;
 }
 
@@ -782,13 +783,14 @@ the website, in dark theme
   z-index: 102;
   transition: all .5s;
   border-radius: 1rem;
-  /* display: none; */
+  visibility: hidden;
 }
 
 .modal.is_open{
-  /* display: block; */
+  visibility: visible;
   transform: translateX(-50%) translateY(-75%);
   transition: all .5s;
+  /*transition-delay: .5s;*/
 }
 
 .modal.is_open + .modal_overlay{
@@ -802,9 +804,6 @@ the website, in dark theme
   opacity: 50%;
 }
 
-.container {
-  padding: ;
-}
 .modal_header{
   position: relative;
   box-shadow: 0 2px 2px rgba(0,0,0,.2);
