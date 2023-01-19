@@ -492,6 +492,9 @@ the website, in dark theme
   padding: 2.5rem 3rem 2rem 1.5rem;
   border-radius: 1rem;
 }
+a.steps__card {
+  color: var(--text-color);
+}
 
 .steps__card-number{
   display: inline-block;
@@ -1222,7 +1225,6 @@ the website, in dark theme
     font-size: var(--small-font-size);
   }
   
-  }
   .home__social-link{
     font-size: 1.15rem;
   }
