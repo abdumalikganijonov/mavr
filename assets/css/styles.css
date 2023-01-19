@@ -491,6 +491,7 @@ the website, in dark theme
   background-color: var(--container-color);
   padding: 2.5rem 3rem 2rem 1.5rem;
   border-radius: 1rem;
+  cursor: pointer;
 }
 a.steps__card {
   color: var(--text-color);
